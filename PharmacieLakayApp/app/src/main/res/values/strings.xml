@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">PharmacieLakay</string>
+
+    <string name="title_activity_welcome">Bienvenue</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Pharmacie-Lakay</string>
+    <string name="slide_1_desc">*** SIVGEP *** \n \t Système d\'Information de Vente et de Gestion des Pharmacies</string>
+
+    <string name="slide_2_title">Mission</string>
+    <string name="slide_2_desc">L\'application a pour but d\'apporter une visibilité et ameliorer la qualité des services offerts par les pharmacies en haiti.</string>
+
+    <string name="slide_3_title">PAIEMENT</string>
+    <string name="slide_3_desc">L\'application a un systeme de paiement intégré + possibilité de livraison du package. </string>
+
+</resources>
