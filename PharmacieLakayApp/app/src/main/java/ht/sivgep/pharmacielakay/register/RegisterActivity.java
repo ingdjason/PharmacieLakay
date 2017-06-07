@@ -1,7 +1,9 @@
-package ht.sivgep.pharmacielakay;
+package ht.sivgep.pharmacielakay.register;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import ht.sivgep.pharmacielakay.R;
 
 public class RegisterActivity extends AppCompatActivity {
 

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ht.sivgep.pharmacielakay">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,8 +18,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".LoginActivity">
+        </activity>
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".register.RegisterClientActivity" />
+        <activity android:name=".register.RegisterPharmacieActivity" />
+        <activity
+            android:name=".client.ClientActivity"
+            android:label="@string/title_activity_client"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pharmacie.PharmacieActivity"
+            android:label="@string/title_activity_pharmacie"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
