@@ -1,5 +1,7 @@
 package ht.sivgep.pharmacielakay.models;
 
+import java.util.Date;
+
 /**
  * Created by ingdjason on 6/6/17.
  */
@@ -12,6 +14,7 @@ public class Users {
     private String name;
     private String email;
     private String objectID;
+    private Date created;
 
     public Users(){
     }
@@ -62,5 +65,13 @@ public class Users {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
     }
 }

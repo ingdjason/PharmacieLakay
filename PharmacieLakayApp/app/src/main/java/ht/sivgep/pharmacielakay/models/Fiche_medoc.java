@@ -17,7 +17,8 @@ public class Fiche_medoc {
     private String info_sup_medoc;
     private Date exp_medoc;
     private String effet_sec_medoc;
-
+    private Date created;
+    
     public Fiche_medoc(){
 
     }
@@ -100,5 +101,13 @@ public class Fiche_medoc {
 
     public void setEffet_sec_medoc(String effet_sec_medoc) {
         this.effet_sec_medoc = effet_sec_medoc;
+    }
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
     }
 }
