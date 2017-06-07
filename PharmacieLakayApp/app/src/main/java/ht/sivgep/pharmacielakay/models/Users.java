@@ -11,7 +11,6 @@ public class Users {
     private String type;
     private String telephone;
     private String password;
-    private String name;
     private String email;
     private String objectID;
     private Date created;
@@ -49,14 +48,6 @@ public class Users {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getEmail() {

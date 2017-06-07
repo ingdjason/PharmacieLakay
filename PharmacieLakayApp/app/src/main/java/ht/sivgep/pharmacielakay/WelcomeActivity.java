@@ -5,11 +5,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Build;
-import android.preference.PreferenceManager;
+import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +18,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import ht.sivgep.pharmacielakay.client.ClientActivity;
+import ht.sivgep.pharmacielakay.pharmacie.PharmacieActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
@@ -30,8 +32,9 @@ public class WelcomeActivity extends AppCompatActivity {
     private Button btnSkip, btnNext;
     private PrefManager prefManager;
 
-    public String ashLogin;
-    public String nameLogin;
+    public String typeLogin;
+    public String telephoneLogin;
+    public int hashLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,13 +126,25 @@ public class WelcomeActivity extends AppCompatActivity {
     private void launchHomeScreen() {
         prefManager.setFirstTimeLaunch(false);
 
-        SharedPreferences getSharedPreferences = PreferenceManager
-                .getDefaultSharedPreferences(getBaseContext());
-        ashLogin = getSharedPreferences.getString("firstLoginAsh", null);
-        nameLogin = getSharedPreferences.getString("firstLoginName", null);
-        if(ashLogin!=null && nameLogin!=null){
-            startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
-            finish();
+        SharedPreferences getSharedPreferences =getSharedPreferences("PreferencesTAG", Context.MODE_PRIVATE);
+
+        typeLogin = getSharedPreferences.getString("typeLogin", null);
+        telephoneLogin = getSharedPreferences.getString("telephoneLogin", null);
+        hashLogin = getSharedPreferences.getInt("hashLogin", 0);
+
+        if(typeLogin!=null && telephoneLogin!=null && hashLogin!=0){
+            if(typeLogin.equals("CLIENT")){
+                startActivity(new Intent(WelcomeActivity.this, ClientActivity.class));
+                finish();
+            }
+            if(typeLogin.equals("PHARMACIE")){
+                startActivity(new Intent(WelcomeActivity.this, PharmacieActivity.class));
+                finish();
+            }
+            /*if(typeLogin.equals("ADMINISTRATEUR")){
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
+                finish();
+            }*/
         }else{
             startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
             finish();
@@ -174,7 +189,8 @@ public class WelcomeActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = getWindow();
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(Color.TRANSPARENT);
+            //window.setStatusBarColor(Color.TRANSPARENT);
+            window.setStatusBarColor(Color.CYAN);
         }
     }
 

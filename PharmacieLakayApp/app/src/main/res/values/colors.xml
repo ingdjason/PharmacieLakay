@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <!--Iris Blue
+    #13BFD6
+    Iris Blue
+    #0ABBD3
+    Surfie Green
+    #0A6F7A
+    Pelorous
+    #249AA8
+    White Smoke
+    #F0F0F0
+    Hippie Blue
+    #4B8A95-->
+    <color name="colorPrimary">#4B8A95</color>
+    <color name="colorPrimaryDark">#0A6F7A</color>
+    <color name="colorAccent">#249AA8</color>
 
 
     <!-- Screens background color-->
